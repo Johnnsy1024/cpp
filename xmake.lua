@@ -1,6 +1,6 @@
 add_rules("mode.debug", "mode.release")
 
-add_includedirs("src/basicLan/")
+set_languages("c++17")
 
 target("leetCode")
     set_kind("binary")
@@ -8,9 +8,13 @@ target("leetCode")
 target("main")
     set_kind("binary")
     add_files("src/main.cpp")
+    add_includedirs("src/basicLan/headerFile")
 target("basicLan")
     set_kind("binary")
     add_files("src/basicLan/*.cpp")
+target("array")
+    set_kind("binary")
+    add_files("src/basicLan/array.cpp")
 --
 -- If you want to known more usage about xmake, please see https://xmake.io
 --
